@@ -9,6 +9,8 @@ const Home = () => {
         Temporibus unde nobis quo velit, accusamus doloribus ipsa minima nam
         totam similique.
       </p>
+
+      <h1>Hell0</h1>
     </div>
   );
 };
