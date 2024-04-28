@@ -9,7 +9,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Banner = () => {
   return (
     <div className="">
-      <h1 className="text-center my-8 text-3xl font-bold">
+      <h1 className="text-3xl font-semibold text-[#150B2B] text-center my-8">
         Find Your Best: Explore Our Website
       </h1>
       <Swiper
