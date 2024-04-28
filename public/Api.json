@@ -1,0 +1,89 @@
+[
+  {
+    "image": "https://i.ibb.co/WctJVS6/5.jpg",
+    "estate_title": "Modern Hospital Complex",
+    "id": "hosp001",
+    "segment_name": "Hospitals",
+    "description": "State-of-the-art medical facility equipped with advanced technology.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "50,000 sq ft",
+    "location": "City Center",
+    "facilities": [
+      "Operating Rooms",
+      "Emergency Department",
+      "ICU",
+      "Diagnostic Imaging"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/mJ6g80x/scool.jpg",
+    "estate_title": "Elite Private School Campus",
+    "id": "sch001",
+    "segment_name": "Schools",
+    "description": "Premier educational institution with modern classrooms and facilities.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "30 acres",
+    "location": "Suburban Area",
+    "facilities": ["Science Labs", "Library", "Sports Facilities", "Auditorium"]
+  },
+  {
+    "image": "https://i.ibb.co/qs4xHxM/Religious-Facilities.jpg",
+    "estate_title": "Historic Cathedral",
+    "id": "rel001",
+    "segment_name": "Religious Facilities",
+    "description": "Architectural marvel with intricate craftsmanship and serene ambiance.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "10,000 sq ft",
+    "location": "Old Town",
+    "facilities": ["Sanctuary", "Chapels", "Bell Tower", "Courtyard"]
+  },
+  {
+    "image": "https://i.ibb.co/GVzxXQZ/Transportation-Terminals.jpg",
+    "estate_title": "Modern Transportation Hub",
+    "id": "tran001",
+    "segment_name": "Transportation Terminals",
+    "description": "Central hub connecting various modes of transportation with efficiency.",
+    "price": "$20,000,000",
+    "status": "sale",
+    "area": "100,000 sq ft",
+    "location": "Waterfront",
+    "facilities": [
+      "Bus Terminals",
+      "Train Platforms",
+      "Parking",
+      "Waiting Lounges"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/1RffHLq/Convention-Centers.jpg",
+    "estate_title": "Modern Convention Center",
+    "id": "conv001",
+    "segment_name": "Convention Centers",
+    "description": "Versatile event space suitable for conferences, exhibitions, and seminars.",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "75,000 sq ft",
+    "location": "Downtown",
+    "facilities": [
+      "Exhibition Halls",
+      "Meeting Rooms",
+      "Auditorium",
+      "Catering Facilities"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/X2yr60J/Art-Galleries.jpg",
+    "estate_title": "Contemporary Art Gallery",
+    "id": "art001",
+    "segment_name": "Art Galleries",
+    "description": "Gallery space showcasing avant-garde artworks from renowned artists.",
+    "price": "$8,000,000",
+    "status": "sale",
+    "area": "20,000 sq ft",
+    "location": "Art District",
+    "facilities": ["Exhibition Spaces", "Storage Rooms", "Café", "Gift Shop"]
+  }
+]

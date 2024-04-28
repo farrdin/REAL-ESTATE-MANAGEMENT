@@ -1,16 +1,16 @@
+import Asearch from "../Componets/Asearch";
+import Banner from "../Componets/Banner";
+import Estate from "../Componets/Estate";
+import Faq from "../Componets/Faq";
+
+
 const Home = () => {
   return (
     <div>
-      <h1>Hi This is New Page</h1>
-      <h2>Hell0</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
-        blanditiis atque laboriosam exercitationem dolore aut quam possimus sed?
-        Temporibus unde nobis quo velit, accusamus doloribus ipsa minima nam
-        totam similique.
-      </p>
-
-      <h1>Hell0</h1>
+      <Banner></Banner>
+      <Asearch></Asearch>
+      <Estate></Estate>
+      <Faq></Faq>
     </div>
   );
 };
