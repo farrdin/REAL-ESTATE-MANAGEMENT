@@ -4,7 +4,7 @@ import Navbar from "../Componets/Navbar";
 
 const Root = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar></Navbar>
       <div className="w-[85%] mx-auto">
         <Outlet></Outlet>
