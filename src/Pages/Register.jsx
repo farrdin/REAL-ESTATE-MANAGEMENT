@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,6 +9,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -37,6 +38,8 @@ const Register = () => {
         toast.success("Congratulations Account Created Successfully", {
           theme: "colored",
         });
+        e.target.reset();
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);

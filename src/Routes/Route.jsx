@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import WishList from "../Pages/WishList";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Componets/Error";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -22,19 +23,24 @@ const router = createBrowserRouter([
         loader: () => fetch("/Api.json"),
       },
       {
-        path: "/update",
+        path: "/wishlist",
         element: (
           <PrivateRoute>
-            <UpdateProfile></UpdateProfile>
+            <WishList></WishList>
           </PrivateRoute>
         ),
         errorElement: <ErrorPage />,
       },
       {
-        path: "/wishlist",
+        path: "/about",
+        element: <About></About>,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/update",
         element: (
           <PrivateRoute>
-            <WishList></WishList>
+            <UpdateProfile></UpdateProfile>
           </PrivateRoute>
         ),
         errorElement: <ErrorPage />,
@@ -53,7 +59,6 @@ const router = createBrowserRouter([
         element: <LogIn></LogIn>,
         errorElement: <ErrorPage />,
       },
-
       {
         path: "/register",
         element: <Register></Register>,

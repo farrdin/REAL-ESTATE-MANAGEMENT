@@ -24,6 +24,7 @@ const LogIn = () => {
         toast.success("Logged In Successfully", {
           theme: "colored",
         });
+        e.target.reset();
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {

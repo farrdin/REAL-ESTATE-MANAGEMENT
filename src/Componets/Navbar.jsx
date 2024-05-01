@@ -20,11 +20,18 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/update">Update Profile</NavLink>
-      </li>
-      <li>
         <NavLink to="/wishlist">Wishlist</NavLink>
       </li>
+      <li>
+        <NavLink to="/about">About</NavLink>
+      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/update">Update Profile</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
