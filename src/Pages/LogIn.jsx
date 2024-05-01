@@ -1,8 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const LogIn = () => {
+  const [showPass, setShowPass] = useState(false);
   const { logIn, googleLogIn, gitHubLogIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,10 +21,14 @@ const LogIn = () => {
     logIn(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Logged In Successfully", {
+          theme: "colored",
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
+        toast.error("Invalid Email or Password", { theme: "colored" });
       });
   };
 
@@ -44,6 +53,9 @@ const LogIn = () => {
 
   return (
     <div className="bg-base-200 my-10 rounded-2xl p-8 ">
+      <Helmet>
+        <title>EstateVista | LogIn</title>
+      </Helmet>
       <div className="text-center mb-5">
         <h1 className="text-5xl font-bold">LogIn now!</h1>
       </div>
@@ -61,17 +73,27 @@ const LogIn = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
               name="password"
-              type="password"
+              type={showPass ? "text" : "password"}
               placeholder="Enter Your Password"
-              className="input input-bordered"
+              className="input input-bordered "
               required
             />
+            <span
+              className="absolute right-2 bottom-4"
+              onClick={() => setShowPass(!showPass)}
+            >
+              {!showPass ? (
+                <FaEye className="text-xl"></FaEye>
+              ) : (
+                <FaEyeSlash className="text-xl"></FaEyeSlash>
+              )}
+            </span>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">LogIn</button>
@@ -108,6 +130,7 @@ const LogIn = () => {
           </p>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

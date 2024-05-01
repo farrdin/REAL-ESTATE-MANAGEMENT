@@ -1,29 +1,54 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+  const [showPass, setShowPass] = useState(false);
   const { createUser } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    // const name = form.get("name");
     const email = form.get("email");
-    // const photo = form.get("photo");
     const password = form.get("password");
-
+    if (password.length < 6) {
+      toast.error("You must enter 6 character or long", {
+        theme: "colored",
+      });
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("You must enter at least one Uppercase character", {
+        theme: "colored",
+      });
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.error("You must enter at least one Lowercase character", {
+        theme: "colored",
+      });
+      return;
+    }
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Congratulations Account Created Successfully", {
+          theme: "colored",
+        });
       })
       .catch((error) => {
         console.error(error);
+        toast.error(error.message, { theme: "colored" });
       });
   };
 
   return (
     <div className="bg-base-200 my-10 rounded-2xl p-8 ">
+      <Helmet>
+        <title>EstateVista | Register</title>
+      </Helmet>
       <div className="text-center mb-5">
         <h1 className="text-5xl font-bold">Register now!</h1>
       </div>
@@ -61,30 +86,41 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
               name="password"
-              type="password"
+              type={showPass ? "text" : "password"}
               placeholder="Enter Your Password"
               className="input input-bordered"
               required
             />
-            <label className="label">
-              <a>
-                Alreay have an account?
-                <Link className="text-blue-600 ml-1" to="/login">
-                  LogIn
-                </Link>
-              </a>
-            </label>
+            <span
+              className="absolute right-2 bottom-4"
+              onClick={() => setShowPass(!showPass)}
+            >
+              {!showPass ? (
+                <FaEye className="text-xl"></FaEye>
+              ) : (
+                <FaEyeSlash className="text-xl"></FaEyeSlash>
+              )}
+            </span>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Register</button>
           </div>
         </form>
+        <div className="flex justify-center pb-5">
+          <p>
+            Alreay have an account?
+            <Link className="text-blue-600 ml-1" to="/login">
+              LogIn
+            </Link>
+          </p>
+        </div>
+        <ToastContainer />
       </div>
     </div>
   );

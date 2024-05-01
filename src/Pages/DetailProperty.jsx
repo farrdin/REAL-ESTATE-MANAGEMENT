@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 
 const DetailProperty = () => {
@@ -13,9 +14,11 @@ const DetailProperty = () => {
     segment_name,
     status,
   } = useParams();
-  console.log(id);
   return (
     <div>
+      <Helmet>
+        <title>EstateVista | {id} Details</title>
+      </Helmet>
       <h1>{id}</h1>
     </div>
   );

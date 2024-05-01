@@ -88,7 +88,7 @@ const Navbar = () => {
               >
                 <li>
                   <a className="justify-between">
-                    {!user.displayName ? "UserName" : user.displayName}
+                    {!user.displayName ? user.email : user.displayName}
                     <span className="badge">New</span>
                   </a>
                 </li>
