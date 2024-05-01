@@ -21,9 +21,11 @@ const LogIn = () => {
     logIn(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Logged In Successfully", {
-          theme: "colored",
-        });
+        {
+          toast.success("Logged In Successfully", {
+            theme: "colored",
+          });
+        }
         e.target.reset();
         navigate(location?.state ? location.state : "/");
       })

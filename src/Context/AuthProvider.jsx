@@ -19,6 +19,9 @@ const providerr = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [name, setName] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const [loading, setLoading] = useState(true);
 
   const createUser = (email, password) => {
@@ -47,6 +50,9 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+      setName(currentUser.displayName || "");
+      setPhotoURL(currentUser.photoURL || "");
+      setNewPassword(currentUser.password || "");
     });
     return () => {
       unSubscribe();
@@ -55,6 +61,12 @@ const AuthProvider = ({ children }) => {
 
   const authInfo = {
     user,
+    name,
+    setName,
+    photoURL,
+    setPhotoURL,
+    newPassword,
+    setNewPassword,
     loading,
     createUser,
     logIn,

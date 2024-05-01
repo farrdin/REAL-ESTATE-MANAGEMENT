@@ -94,10 +94,10 @@ const Navbar = () => {
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
+                  <Link to="/update" className="justify-between">
                     {!user.displayName ? user.email : user.displayName}
-                    <span className="badge">New</span>
-                  </a>
+                    <span className="badge text-[10px]">Update info</span>
+                  </Link>
                 </li>
                 <li>
                   <a onClick={handleLogOut}>Logout</a>
