@@ -27,7 +27,9 @@ const LogIn = () => {
           });
         }
         e.target.reset();
-        navigate(location?.state ? location.state : "/");
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1500);
       })
       .catch((error) => {
         console.error(error);

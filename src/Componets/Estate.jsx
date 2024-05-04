@@ -8,7 +8,7 @@ const Estate = () => {
     <div className="border rounded-2xl my-20 p-5">
       <div className="text-center">
         <h1 className="text-3xl font-semibold text-[#150B2B]">
-          EstateVista Single Property Pages
+          Estate : Property Page
         </h1>
         <p className="text-base text-[#150B2B99] font-normal leading-7">
           Choose from these different single property pages to display property

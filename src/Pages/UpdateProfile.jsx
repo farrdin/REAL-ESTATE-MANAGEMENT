@@ -93,7 +93,6 @@ const UpdateProfile = () => {
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Update Password"
                 className="input input-bordered"
-                required
               />
               <span
                 className="absolute right-2 bottom-4"

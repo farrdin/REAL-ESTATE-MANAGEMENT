@@ -30,6 +30,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         errorElement: <ErrorPage />,
+        loader: () => fetch("/Api.json"),
       },
       {
         path: "/about",
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         errorElement: <ErrorPage />,
+        loader: () => fetch("/Api.json"),
       },
       {
         path: "/login",
