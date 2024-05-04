@@ -117,7 +117,7 @@ const Register = () => {
             </span>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn btn-secondary">Register</button>
           </div>
         </form>
         <div className="flex justify-center pb-5 text-center">
