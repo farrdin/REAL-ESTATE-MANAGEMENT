@@ -106,11 +106,11 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <Link to="/login">
-                <button className="btn btn-outline">Log In</button>
+              <Link to="/login" className="mr-1">
+                <button className="btn btn-sm btn-secondary">Log In</button>
               </Link>
               <Link to="/register">
-                <button className="btn btn-outline">Register</button>
+                <button className="btn btn-sm btn-primary">Register</button>
               </Link>
             </>
           )}

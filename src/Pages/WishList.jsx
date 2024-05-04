@@ -21,9 +21,9 @@ const WishList = () => {
       <Helmet>
         <title>EstateVista | Wishlist</title>
       </Helmet>
-      <div className="p-5 space-y-5">
-        {wishlist &&
-          wishlist.map((list) => (
+      {wishlist && wishlist.length > 0 ? (
+        <div className="p-5 space-y-5">
+          {wishlist.map((list) => (
             <div
               key={list.id}
               className="border rounded-2xl flex flex-col  lg:flex lg:flex-row justify-around items-center p-3"
@@ -76,7 +76,14 @@ const WishList = () => {
               </div>
             </div>
           ))}
-      </div>
+        </div>
+      ) : (
+        <div>
+          <h1 className="text-3xl text-center text-red-600 my-32 font-work font-semibold">
+            Sorry, Your Your Wishlist Is Empty !
+          </h1>
+        </div>
+      )}
     </div>
   );
 };

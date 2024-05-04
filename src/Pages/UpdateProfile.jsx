@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import { updateProfile, updatePassword } from "firebase/auth";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "animate.css";
 
@@ -27,12 +27,16 @@ const UpdateProfile = () => {
       });
       if (newPassword) {
         await updatePassword(user, newPassword);
-        alert("Password updated successfully!");
+        toast.success("Password updated successfully!", {
+          theme: "colored",
+        });
       }
-      alert("Profile updated successfully!");
+      toast.success("Password updated successfully!", {
+        theme: "colored",
+      });
     } catch (error) {
       console.error("Error updating profile:", error.message);
-      alert("Failed to update profile. Please try again.");
+      toast.error("Failed to update profile. Please try again.");
     }
   };
 
@@ -43,8 +47,8 @@ const UpdateProfile = () => {
           <title>EstateVista | UpdateProfile</title>
         </Helmet>
         <div className="text-center mb-5 flex flex-col justify-center items-center gap-10">
-          <h1 className="text-5xl font-bold animate__animated animate__jackInTheBox">
-            User Profile
+          <h1 className="text-5xl font-work font-bold animate__animated animate__jackInTheBox">
+            Profile Info
           </h1>
           <img src={photoURL} className="rounded-full w-[200px] h-[200px]" />
         </div>
