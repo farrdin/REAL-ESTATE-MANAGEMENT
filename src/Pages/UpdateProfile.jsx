@@ -4,6 +4,7 @@ import { AuthContext } from "../Context/AuthProvider";
 import { updateProfile, updatePassword } from "firebase/auth";
 import { ToastContainer } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import "animate.css";
 
 const UpdateProfile = () => {
   const [showPass, setShowPass] = useState(false);
@@ -41,8 +42,11 @@ const UpdateProfile = () => {
         <Helmet>
           <title>EstateVista | UpdateProfile</title>
         </Helmet>
-        <div className="text-center mb-5">
-          <h1 className="text-5xl font-bold">User Profile</h1>
+        <div className="text-center mb-5 flex flex-col justify-center items-center gap-10">
+          <h1 className="text-5xl font-bold animate__animated animate__jackInTheBox">
+            User Profile
+          </h1>
+          <img src={photoURL} className="rounded-full w-[200px] h-[200px]" />
         </div>
         <div className="w-full max-w-sm shadow-2xl bg-base-100 mx-auto rounded-2xl">
           <form onSubmit={handleSaveChanges} className="card-body">

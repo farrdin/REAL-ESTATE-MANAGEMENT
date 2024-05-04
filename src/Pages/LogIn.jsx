@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import "animate.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import { Helmet } from "react-helmet-async";
@@ -62,7 +63,9 @@ const LogIn = () => {
         <title>EstateVista | LogIn</title>
       </Helmet>
       <div className="text-center mb-5">
-        <h1 className="text-5xl font-bold">LogIn now!</h1>
+        <h1 className="text-5xl font-bold animate__animated animate__slideInDown">
+          LogIn now!
+        </h1>
       </div>
       <div className="w-full max-w-sm shadow-2xl bg-base-100 mx-auto rounded-2xl pb-5">
         <form onSubmit={handleLogin} className="card-body">
@@ -111,7 +114,7 @@ const LogIn = () => {
         </div>
         <button
           onClick={handleGoogleLogin}
-          className="btn btn-secondary  w-[320px] mx-auto block"
+          className="btn btn-secondary  w-[83%] mx-auto block"
         >
           LogIn with Google
         </button>
@@ -122,11 +125,11 @@ const LogIn = () => {
         </div>
         <button
           onClick={handleGitHubLogin}
-          className="btn btn-success  w-[320px] mx-auto block"
+          className="btn btn-success  w-[83%] mx-auto block"
         >
           LogIn with Github
         </button>
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center mt-5 text-center">
           <p>
             Dont have an account?
             <Link className="text-blue-600 ml-1" to="/register">

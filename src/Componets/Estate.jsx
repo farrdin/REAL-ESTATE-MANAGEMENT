@@ -15,7 +15,7 @@ const Estate = () => {
           details according to the information you want to see.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-5  my-10">
+      <div className="grid lg:grid-cols-3 gap-5  my-10 ">
         {estates.map((estate) => (
           <State key={estate.id} estates={estate}></State>
         ))}

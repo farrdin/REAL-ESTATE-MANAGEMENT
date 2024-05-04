@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         poppins: " 'Poppins', sans-serif",
+        work: " 'Work Sans', serif",
+        play: "'Playfair Display', serif",
       },
     },
   },

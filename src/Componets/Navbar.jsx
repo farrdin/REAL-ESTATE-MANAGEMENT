@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/wishlist">Wishlist</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">About US</NavLink>
       </li>
       {user && (
         <>
@@ -63,7 +63,7 @@ const Navbar = () => {
               {navbars}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl ">
+          <a className="btn btn-ghost text-xl  lg:text-3xl ">
             <NavLink to="/">EstateVista</NavLink>
           </a>
         </div>
@@ -107,10 +107,10 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/login">
-                <button className="btn">Log In</button>
+                <button className="btn btn-outline">Log In</button>
               </Link>
               <Link to="/register">
-                <button className="btn">Register</button>
+                <button className="btn btn-outline">Register</button>
               </Link>
             </>
           )}

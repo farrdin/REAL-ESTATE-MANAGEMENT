@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import "animate.css";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import { Helmet } from "react-helmet-async";
@@ -55,7 +56,9 @@ const Register = () => {
         <title>EstateVista | Register</title>
       </Helmet>
       <div className="text-center mb-5">
-        <h1 className="text-5xl font-bold">Register now!</h1>
+        <h1 className="text-5xl font-bold animate__animated animate__slideInUp">
+          Register now!
+        </h1>
       </div>
       <div className="w-full max-w-sm shadow-2xl bg-base-100 mx-auto rounded-2xl">
         <form onSubmit={handleRegister} className="card-body">
@@ -117,7 +120,7 @@ const Register = () => {
             <button className="btn btn-primary">Register</button>
           </div>
         </form>
-        <div className="flex justify-center pb-5">
+        <div className="flex justify-center pb-5 text-center">
           <p>
             Alreay have an account?
             <Link className="text-blue-600 ml-1" to="/login">

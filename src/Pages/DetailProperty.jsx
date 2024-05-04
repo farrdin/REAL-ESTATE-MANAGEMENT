@@ -24,7 +24,7 @@ const DetailProperty = () => {
   return (
     <div>
       <Helmet>
-        <title>EstateVista | {id} Details</title>
+        <title>EstateVista | Details-{id} Details</title>
       </Helmet>
       <img src={image} alt="" />
       {estate_title}
