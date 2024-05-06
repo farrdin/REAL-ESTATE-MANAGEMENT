@@ -28,14 +28,14 @@ const DetailProperty = () => {
       </Helmet>
 
       <div className="flex flex-col lg:flex-row gap-5 border rounded-2xl p-5">
-        <div className="w-1/2 flex flex-col space-y-5 items-center">
+        <div className="lg:w-1/2 flex flex-col space-y-5 items-center">
           <img className="rounded-xl" src={image} alt="" />
           <button onClick={buyLaterWish} className="btn btn-secondary w-2/3">
             Add to wishlist
           </button>
           <button className="btn btn-primary w-2/3">Book Now</button>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <div className="space-y-3">
             <h1 className="text-xl font-bold font-work text-[#282828]">
               {estate_title}
