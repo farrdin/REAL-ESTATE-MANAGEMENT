@@ -30,10 +30,10 @@ const UpdateProfile = () => {
         toast.success("Password updated successfully!", {
           theme: "colored",
         });
-      }
-      toast.success("Profile updated successfully!", {
-        theme: "colored",
-      });
+      } else
+        toast.success("Profile updated successfully!", {
+          theme: "colored",
+        });
     } catch (error) {
       console.error("Error updating profile:", error.message);
       toast.error("Failed to update profile. Please try again.");
