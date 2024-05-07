@@ -31,7 +31,7 @@ const UpdateProfile = () => {
           theme: "colored",
         });
       }
-      toast.success("Password updated successfully!", {
+      toast.success("Profile updated successfully!", {
         theme: "colored",
       });
     } catch (error) {
