@@ -7,7 +7,7 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import WishList from "../Pages/WishList";
 import PrivateRoute from "./PrivateRoute";
-import ErrorPage from "../Componets/Error";
+import ErrorPage from "../Pages/Error";
 import About from "../Pages/About";
 
 const router = createBrowserRouter([
