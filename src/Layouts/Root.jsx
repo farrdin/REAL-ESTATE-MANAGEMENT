@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Footer from "../Componets/Footer";
 import Navbar from "../Componets/Navbar";
 import { Helmet } from "react-helmet-async";
-import { ToastContainer } from "react-toastify";
 
 const Root = () => {
   return (

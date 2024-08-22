@@ -3,12 +3,11 @@ import "animate.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div>
       <h1 className="text-3xl font-semibold text-[#150B2B] text-center my-8 animate__animated animate__flipInY">
         Find Your Best: Explore Our Website
       </h1>
